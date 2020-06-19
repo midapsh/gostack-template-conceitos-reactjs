@@ -8,8 +8,8 @@ function App() {
 
   useEffect(() => {
     api.get("/repositories").then(response => {
-      if (response.data.results) {
-        setRepositories(response.data.results);
+      if (response.data) {
+        setRepositories(response.data);
       }
     });
   }, []);
